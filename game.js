@@ -1785,11 +1785,10 @@ let dungeon = {
     _val : 1,
     set val(value) {
         if (value !== this._val) {
-            gendungeon(dungeondict[this._val - 1][0],dungeondict[this._val - 1][1]);
+            gendungeon(dungeondict[this._val % 2][0],dungeondict[this._val % 2][1]);
         }
         this._val = value;
         showfoes();
-
     },
     get val() {
         return this._val;
@@ -1976,7 +1975,7 @@ function loadgame() {
             flavoradd(); //showfoes() is in flavoradd();
             setTimeout(flavoradd,50); //for some reason it has to be used twice \(-_-)/
             if (Portal.Quantity > 0) {
-                gendungeon(dungeondict[dungeon.val - 1][0],dungeondict[dungeon.val - 1][1]);
+                gendungeon(dungeondict[dungeon.val % 2][0],dungeondict[dungeon.val % 2][1]);
             }
         });
         if (currentlevel.val >= 4) {
