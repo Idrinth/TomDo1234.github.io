@@ -1765,7 +1765,7 @@ let playerbronze = {
             }
             else if (this._val === 15 && this.milestone < 3) {
                 let playerpic = $('#Playerpic')[0];
-                playerpic.src = "player1.png";
+                playerpic.src = "img/player1.png";
                 tiledict['P'] = playerpic.src;
                 $('#Pdescription')[0].innerHTML = "You have grown more powerful, you are becoming less generic as you become more powerful in the arcane" +
                     ". The blue ring that borders you is abundance of mana you can control.";
@@ -1813,7 +1813,7 @@ let fighttimer = {
 
 let goblin = new Foe("Generic Goblin", 1, 1, 1, [playerbronze,1,1000],0,1,"","Genericgoblin1.png");
 let imp = new Foe("Generic Imp", 5, 2, 1, [playerbronze,2,1000],0,2,"","Genericimp1.png");
-let snake = new Foe("Generic Snake",30,5,7,[playerbronze,40,1000],3,20,"","Genericsnake1.png");
+let snake = new Foe("Generic Snake",30,5,7,[playerbronze,40,1000],3,20,"","genericsnake1.png");
 let goblin1 = new Foe("Killer Goblin Novice",100,10,3,[playerbronze,200,1000],7,120,"","goblin1.png");
 let boss1 = new Foe("Frosty Abomination Fourth Class",800,50,12,[plainuselesslocket,1,1000,playerbronze,2000,1000],0,2000
     ,"","boss1.png");
@@ -1981,7 +1981,7 @@ function loadgame() {
         if (currentlevel.val >= 4) {
             $('#pmana').show();
             if (currentlevel.val >= 15) {
-                $("#Playerpic")[0].src = "player1.png";
+                $("#Playerpic")[0].src = "img/player1.png";
             }
         }
     }
